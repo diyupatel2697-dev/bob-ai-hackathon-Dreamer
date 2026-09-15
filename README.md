@@ -11,7 +11,7 @@ AI-powered predictive maintenance platform that transforms HUMS (Health & Usage 
 | **Team Name** | Dreamer |
 | **Track** | AI |
 | **Team Lead** | Diya Patel |
-| **Members** | Add Team Members Here |
+| **Members** | Heer Patel, Dhanvi Patel, Drashti Raiyani|
 
 ---
 
