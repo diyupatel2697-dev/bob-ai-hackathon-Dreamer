@@ -1,49 +1,31 @@
-# Architecture
-
-## System Architecture
-
-[Describe the overall architecture of your system. Replace the Mermaid diagram below with your actual architecture.]
-
-```mermaid
 graph TD
-    A[User / Browser] -->|HTTP| B[Frontend - React]
-    B -->|REST API| C[Backend - FastAPI]
-    C -->|SDK| D[watsonx.ai]
-    C -->|Query| E[PostgreSQL]
-    C -->|Publish| F[Slack Webhook]
-    D -->|Inference Result| C
-```
+    A[User / Browser] -->|Upload Prompt / Assets| B[Frontend Web App]
+    B -->|API Request| C[Backend Service]
+    C -->|Generate Content| D[IBM watsonx.ai]
+    C -->|Store Projects| E[Database]
+    C -->|Generate Video Assets| F[Media Processing Engine]
+    D -->|AI Response| C
+    F -->|Rendered Video| C
+    C -->|Video URL & Metadata| B
 
-## Components
 
-| Component | Technology | Responsibility |
-|---|---|---|
-| Frontend | [e.g., React 18] | [e.g., Dashboard UI, user interaction] |
-| Backend API | [e.g., FastAPI] | [e.g., Business logic, orchestration] |
-| AI / ML | [e.g., watsonx.ai] | [e.g., Anomaly scoring, classification] |
-| Database | [e.g., PostgreSQL] | [e.g., Storing pipeline events and scores] |
-| Notifications | [e.g., Slack API] | [e.g., Alerting on threshold breaches] |
+Data Flow
 
-## Data Flow
+Users upload images, videos, or enter a text prompt through the web application.
+The frontend sends the request to the backend API.
+The backend processes the request and sends prompts to IBM watsonx.ai.
+watsonx.ai generates video scripts, captions, scene suggestions, or narration content.
+Generated content and project metadata are stored in the database.
+The media processing engine combines assets, audio, and AI-generated content into a final video.
+Rendered videos are stored in cloud storage.
+The frontend displays the completed video and provides download and sharing options.
+Security Considerations
+API keys and secrets are stored in environment variables.
+All communication uses HTTPS.
+User uploads are validated before processing.
+Authentication tokens protect private project resources.
+Role-based access control can be added for team collaboration.
+Sensitive data is never committed to source control.
+Scalability Notes
 
-[Describe how data moves through your system from input to output.]
-
-1. [e.g., Pipeline logs are ingested via a webhook from GitHub Actions]
-2. [e.g., Logs are preprocessed and chunked into 512-token segments]
-3. [e.g., Each chunk is sent to the watsonx.ai inference endpoint]
-4. [e.g., Anomaly scores are stored in PostgreSQL]
-5. [e.g., The React dashboard polls the API every 30 seconds to refresh]
-
-## Security Considerations
-
-[Note any security decisions relevant to the architecture — even if basic.]
-
-- [e.g., API keys stored in environment variables, never committed to git]
-- [e.g., All API routes require a Bearer token]
-- [e.g., Database credentials rotated via IBM Secrets Manager]
-
-## Scalability Notes
-
-[Optional: how would this scale beyond the hackathon prototype?]
-
-[e.g., "The FastAPI backend is stateless and could be horizontally scaled behind a load balancer. The watsonx.ai calls are the bottleneck and would benefit from request batching."]
+The system is designed as a set of loosely coupled services. The frontend can be served via a CDN, while backend instances can scale horizontally behind a load balancer. Video rendering jobs can be processed asynchronously using a job queue and worker architecture. Object storage enables efficient handling of large media files, while caching frequently accessed project data reduces database load.
