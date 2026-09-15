@@ -1,6 +1,6 @@
-# 🚀 [Your Project Title Here]
+# 🚀 SentinelAI - Military Predictive Maintenance Platform
 
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
+AI-powered predictive maintenance platform that transforms HUMS (Health & Usage Monitoring System) sensor data into actionable intelligence, helping military organizations improve fleet readiness, predict failures before they occur, and reduce maintenance costs.
 
 ---
 
@@ -8,36 +8,32 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Name** | Diya Patel |
+| **Track** | AI |
+| **Team Lead** | Diya Patel |
+| **Members** | Add Team Members Here |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+Military organizations often struggle to determine whether aircraft, vehicles, and mission-critical equipment are truly mission-ready. Maintenance is typically performed on fixed schedules instead of actual equipment condition, while valuable HUMS sensor data remains underutilized. This leads to unexpected equipment failures, reduced operational readiness, increased downtime, and significant maintenance costs.
 
 ---
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+SentinelAI is an AI-powered predictive maintenance platform that continuously analyzes HUMS sensor data to assess equipment health and predict failures before they happen. By providing real-time risk assessment, maintenance recommendations, and fleet readiness insights, the platform enables proactive maintenance planning and improves operational availability.
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **AI Failure Prediction:** Predict component failures weeks before breakdowns occur.
+- **Fleet Readiness Dashboard:** Monitor mission-ready assets, maintenance status, and overall fleet health.
+- **Equipment Health Scoring:** Generate health scores and remaining useful life estimates for critical assets.
+- **Predictive Maintenance Planning:** Recommend maintenance actions based on asset condition and risk level.
+- **Real-Time Alerts & Analytics:** Provide early warning notifications and executive-level performance insights.
 
 ---
 
@@ -45,51 +41,95 @@
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| **Languages** | TypeScript, JavaScript |
+| **Frameworks** | React, Tailwind CSS, Vite |
+| **IBM Technologies** | IBM Granite, watsonx.ai |
+| **Databases** | Local JSON Data |
+| **Other** | Recharts, GitHub, Vercel |
 
 ---
 
 ## 📁 Repository Structure
 
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
+```text
+├── src/                       # Application source code
+├── docs/                      # Project documentation
 │   ├── problem-statement.md
 │   ├── solution-overview.md
 │   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
+│   ├── setup-guide.md
+│   └── business-impact.md
+├── demo/
+│   ├── screenshots/
+│   ├── demo-video-link.txt
+│   └── live-demo-url.txt
+├── presentation/
+│   └── README.md
+├── submission.yaml
+└── README.md
 ```
 
 ---
 
 ## ⚡ How to Run
 
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
-
 ```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/sentinel-ai.git
 
-# 2. Install dependencies
-[your install command here]
+# Open folder
+cd sentinel-ai
 
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
+# Install dependencies
+npm install
 
-# 4. Run the project
-[your run command here]
+# Start development server
+npm run dev
+
+# Build project
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+---
+
+## 🏗️ System Architecture
+
+```text
+HUMS Sensors
+      │
+      ▼
+Data Collection Layer
+      │
+      ▼
+AI Prediction Engine
+      │
+      ▼
+Health Scoring & Risk Assessment
+      │
+      ▼
+Maintenance Recommendation Engine
+      │
+      ▼
+Fleet Readiness Dashboard
+```
+
+---
+
+## 📈 Business Impact
+
+Military organizations spend billions annually on maintenance operations. SentinelAI helps shift maintenance from a reactive approach to a predictive strategy.
+
+### Expected Benefits
+
+- Up to 30% reduction in downtime
+- Improved fleet readiness and asset availability
+- Reduced emergency maintenance events
+- Better spare-parts forecasting
+- Lower maintenance expenditures
+- Improved mission success rates
 
 ---
 
@@ -97,25 +137,39 @@ cp .env.example .env
 
 | Artifact | Link |
 |---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
+| 📹 Demo Video | See `demo/demo-video-link.txt` |
+| 🌐 Live Demo | See `demo/live-demo-url.txt` |
+| 🖼️ Screenshots | See `demo/screenshots/` |
+| 📊 Presentation | See `presentation/` |
+
+---
+
+## 🔮 Future Roadmap
+
+- Real-time HUMS sensor integration
+- Advanced machine learning models
+- Digital twin simulation capabilities
+- Predictive spare-parts optimization
+- Multi-fleet management platform
+- Edge AI deployment for remote operations
 
 ---
 
 ## ⚠️ Known Limitations
 
-> Be honest — judges appreciate transparency over overclaiming.
-
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
+- Current version uses simulated HUMS datasets.
+- AI predictions are prototype-based and not trained on classified military datasets.
+- No live sensor integration in the current hackathon build.
+- Supply chain optimization features are planned for future releases.
 
 ---
 
 ## 🏅 What We're Most Proud Of
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
+We successfully demonstrated how underutilized HUMS sensor data can be transformed into predictive maintenance intelligence. SentinelAI showcases how AI can proactively identify failure risks, improve fleet readiness, and significantly reduce operational costs while supporting mission-critical military operations.
 
 ---
+
+## 📜 License
+
+This project was developed for the IBM Bob AI Hackathon and is intended for demonstration and educational purposes.
